@@ -1,0 +1,22 @@
+.login-wrapper{
+    padding: 20px;
+    background-color: #fafafa;
+    width: 400px;
+}
+.form-Wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+label{
+    font-size: 20px;
+    color: #333
+}
+input{
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: flex;
+    color: #333;
+    font-size: 16px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Class</title>
+    </head>
+    <body>
+        <h2>Printing Date through Class</h2>
+
+        <script>
+
+        // Example 1st shows the creation of Class and using Construtor and IF ELSe statement to render values
+        class Car {
+            constructor(name,year,id){
+                this.name = name;
+                if (year > 2010) {
+                    this.year = year
+                }
+                else {
+                    this.year = 2010
+                }
+
+                this.id = id;
+
+            }
+            age (){
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        
+        const myCar1 = new Car ('Ford', 2010 , 1122);
+        const myCar2 = new Car ('BMW', 2019 , 3344);
+        console.log("My Carname is " + myCar1.name + " " + "It is " + myCar2.year + " " +"Years Old." + "" + " And the id is" + " "+ myCar1.id)
+        console.log('my car is' + " " + myCar1.age() + " " + 'years old')
+
+        // Example 2nd
+        class Color {
+            constructor(r,g,b) {
+                this.value = [r,g,b];
+            }
+        }
+        const red = new Color(255,0,0) 
+        console.log(red)
+
+        // Example 3rd shows the inheritance in Class and Use the "extends" keyword to inherit all methods from another class.
+        // Use the "super" method to call the parent's constructor function.
+        class Carr {
+         constructor(brand) {
+         this.carname = brand;
+        }
+         present() {
+             return 'I have a ' + this.carname;
+         }
+        }
+
+        class Model extends Carr {
+        constructor(brand, mod) {
+        super(brand);
+        this.model = mod;
+        }
+        show() {
+             return this.present() + ', it is a ' + this.model;
+        }
+        }
+        const myCarr     = new Model("Ford", "Mustang");
+        console.log(myCarr)
+
+        console.log(typeof false)
+
+    </script>
+    </body>
+</html>
